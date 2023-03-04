@@ -1,0 +1,37 @@
+{
+  "name": "app.rutaamigaapp.test",
+  "displayName": "apprutaamigapp",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^10.1.2",
+    "wonderpush-cordova-sdk": "^3.2.5",
+    "wonderpush-cordova-sdk-fcm": "^1.0.6"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "wonderpush-cordova-sdk": {
+        "CLIENT_ID": "cd56829b4189a12bbc77b508db80fd4a14c4f86a",
+        "CLIENT_SECRET": "6eac2d3f35d0e39c4d1c168e6ecd56078772508aa51bd9c5de2d01c193094845",
+        "LOGGING": "false",
+        "AUTO_INIT": "true",
+        "REQUIRES_USER_CONSENT": "false"
+      },
+      "wonderpush-cordova-sdk-fcm": {
+        "SENDER_ID": "975832123305"
+      }
+    }
+  }
+}
