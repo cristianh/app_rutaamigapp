@@ -8,4 +8,25 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <access origin="*" />
+    <allow-navigation href="*"/>
+    <!-- habilitamos la conexion a localhost internamente -->
+    <preference name="hostname" value="localhost" />
+    <preference name="AndroidInsecureFileModeEnabled" value="true" /> 
+
+    <platform name="android">
+        <splash src="res/screen/android/drawable-hdpi/android-splash.png" density="land-hdpi"/>
+        <splash src="res/screen/android/drawable-ldpi/android-splash.png" density="land-ldpi"/>
+        <splash src="res/screen/android/drawable-mdpi/android-splash.png" density="land-mdpi"/>
+        <splash src="res/screen/android/drawable-xhdpi/android-splash.png" density="land-xhdpi"/>
+        <splash src="res/screen/android/drawable-mdpi/android-splash.png" density="port-mdpi"/>
+        <splash src="res/screen/android/drawable-xhdpi/android-splash.png" density="port-xhdpi"/>
+        <splash src="res/screen/android/drawable-xxhdpi/android-splash.png" density="port-xxhdpi"/>
+        <splash src="res/screen/android/drawable-xxxhdpi/android-splash.png" density="port-xxhdpi"/>
+    </platform>
+
+    <icon src="res/android/android-icon.png" platform="android" width="57" height="57" density="mdpi" />
+    <icon src="res/android/android-icon.png" platform="ios" width="57" height="57" density="mdpi" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="10000" />
 </widget>
