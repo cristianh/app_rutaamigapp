@@ -18,9 +18,10 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <!--
+
+<head>
+    <meta charset="utf-8">
+    <!--
         Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
             https://cordova.apache.org/docs/en/latest/
         Some notes:
@@ -28,23 +29,91 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src *;
+        style-src 'self' 'unsafe-inline'; 
+        script-src * 'self' 'unsafe-inline' 'unsafe-eval';
+        connect-src * ;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Ruta Amigapp</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="imagen-container">
+            <img src="./img/Logo2.jpg" alt="">
+        </div>
+        <div class="container-center">
+            <div class="row">
+                <div class="col-12 p-2">
+                    <input class="form-control" type="text" id="nombreruta" name="rutaname"
+                        placeholder="Ingresar nombre de la prueba">
+                </div>
+                <div class="col-12 p-2">
+                    <button class="btn btn-success btn-sm" id="GuardarRuta">GUARDAR NOMBRE</button>
+                </div>
             </div>
         </div>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <select name="rutasSelect" id="selectRutas">
+                        <option value="Seleccione">Seleccione</option>
+                    </select>`
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 p-3">
+                    <button class="btn btn-info text-light btn-sm" id="watchPosition">WATCH POSITION</button>
+                </div>
+                <div class="col-6 p-3">
+                    <button class="btn btn-info text-light btn-sm" id="getPosition">CURRENT POSITION</button>
+
+                </div>
+            </div>
+
+            <!-- <div class="row">
+                <div class="col-6 p-3">
+                    <button class="btn btn-info text-light btn-sm" id="networkInfo">INFO DEVICE</button>
+                </div>
+                <div class="col-6 p-3">
+                    <button class="btn btn-info text-light btn-sm" id="getAcceleration">GET ACCELERATION</button>
+                </div>
+            </div> -->
+            <!-- <div class="row">
+                <div class="col-6 p-3">
+                    <button class="btn btn-secondary text-light btn-sm disabled" id="watchAcceleration">WATCH
+                        ACCELERATION</button>
+                </div>
+                <div class="col-6 p-3">
+                    <button class="btn btn-secondary text-light btn-sm disabled" id="stopwatchPosition">Stop
+                        watchPosition</button>
+                </div>
+            </div> -->
+            <pre>
+                <div id="info">
+            
+                </div>
+            </pre>
+        </div>
+    </div>
+
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IMPORTAMOS LA LIBRERIA DE SOCKET.IO -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+
+</body>
+
 </html>
