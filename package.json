@@ -14,7 +14,9 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^10.1.2",
+    "cordova-browser": "^6.0.0",
     "cordova-plugin-device-motion": "^2.0.1",
+    "cordova-plugin-fetch": "github:aporat/cordova-plugin-fetch",
     "cordova-plugin-geolocation": "^4.1.0",
     "cordova-plugin-network-information": "^3.0.0",
     "cordova-plugin-splashscreen": "^6.0.2",
@@ -23,6 +25,7 @@
   },
   "cordova": {
     "platforms": [
+      "browser",
       "android"
     ],
     "plugins": {
@@ -41,7 +44,8 @@
         "GPS_REQUIRED": "true"
       },
       "cordova-plugin-network-information": {},
-      "cordova-plugin-splashscreen": {}
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-fetch": {}
     }
   }
 }
