@@ -1,8 +1,6 @@
 
 # Ejecutar app mobile.
 
-## Pasos:
-
 ## Deployment
 
 1) Seguir los pasos de instalacion de cordova que aparecen en el siguiente link:
@@ -16,14 +14,19 @@
 ```
 
 
-3) Configurar las variables de entorno java en windows
+
+## Pasos:
+
+
+1) Instalar dependencias:
 ```bash
-  https://cordova.apache.org/docs/en/11.x/guide/cli/
+  npm install
 ```
 
-
-
-
+2) Instalar plataformas:
+```bash
+  cordova platform add android o cordova plaform add brower
+```
 ## Desplegar cordova app:
 Comandos:
 ```bash
