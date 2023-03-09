@@ -13,7 +13,10 @@
   https://www.java.com/es/download/help/windows_manual_download.html
 ```
 
-
+3) Configurar variables de entorno:
+```bash
+  https://www.abrirllave.com/java/configurar-la-variable-de-entorno-java-home.php
+```
 
 ## Pasos:
 
@@ -27,6 +30,8 @@
 ```bash
   cordova platform add android o cordova plaform add brower
 ```
+
+
 ## Desplegar cordova app:
 Comandos:
 ```bash
